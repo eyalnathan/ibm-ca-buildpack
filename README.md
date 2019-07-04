@@ -23,4 +23,4 @@ or add in the manifest:
 ## Details
 This buildpack adds a `.profile` into your application. If you already have profile it will be overwritten.
 
-The buildpack abuses one the restrictions documented in [How buildpacks work in CF](https://docs.cloudfoundry.org/buildpacks/understand-buildpacks.html), as it modifies the `build` directory!
+The buildpack abuses one of the restrictions documented in [How buildpacks work in CF](https://docs.cloudfoundry.org/buildpacks/understand-buildpacks.html), as it modifies the `build` directory!

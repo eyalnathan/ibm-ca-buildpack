@@ -14,7 +14,6 @@ else
   JRE_PATH=$HOME/.java/jre
 fi
 
-
 for SERVICE in postgresql mongodb redis; do
   LEN="$(echo "${VCAP_SERVICES}" | jq --raw-output ".${SERVICE} | length")"
   for (( i=0; i<${LEN}; i++ )); do

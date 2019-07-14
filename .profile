@@ -17,7 +17,6 @@ fi
 
 for SERVICE in postgresql mongodb redis; do
   LEN="$(echo "${VCAP_SERVICES}" | jq --raw-output ".${SERVICE} | length")"
-  echoerr $SERVICE ---- $LEN
   for (( i=0; i<${LEN}; i++ )); do
     CA_BASE64="$(echo "${VCAP_SERVICES}" | jq --raw-output ".${SERVICE}[${i}].credentials.ca_base64")"
     if [[ "${CA_BASE64}" != "null" ]]; then

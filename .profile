@@ -9,6 +9,9 @@ echoerr() { echo "$@" 1>&2; }
 if [[ -d $HOME/.java-buildpack/open_jdk_jre ]]; then
   echoerr "Found OpenJDK JRE ..."
   JRE_PATH=$HOME/.java-buildpack/open_jdk_jre
+elif [[ -d $HOME/META-INF/.sap_java_buildpack/sapjvm ]]; then
+  echoerr "Found SAPMachine JRE ..."
+  JRE_PATH=$HOME/META-INF/.sap_java_buildpack/sapjvm
 else
   echoerr "Using IBM JRE ..."
   JRE_PATH=$HOME/.java/jre

@@ -6,6 +6,6 @@ $stdout.sync = true
 
 build_path = ARGV[0]
 
-puts '-----> IBM CA Buildpack ...'
-FileUtils.cp("#{__dir__}/../.profile", "#{build_path}/.profile")
-puts '       Copied .profile'
+puts '-----> hello.txt Buildpack ...'
+FileUtils.cp("#{__dir__}/../hello.txt", "#{build_path}/hello.txt")
+puts '       Copied hello.txt'
